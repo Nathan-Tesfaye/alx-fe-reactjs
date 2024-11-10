@@ -1,9 +1,10 @@
 import React from 'react';
-import UserDetails from './UserDetails';
+// import UserDetails from './UserDetails';
+import UserProfile from './UserProfile';
 import  UserContext  from './UserContext';
 
 function ProfilePage() {
-  return <UserDetails />;
+  return <UserProfile />;
 }
 
 export default ProfilePage;
