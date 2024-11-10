@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Counter from './components/Counter';
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <MainContent />
           <Footer />
           <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
+          <Counter />
       </div>
   );
 }
