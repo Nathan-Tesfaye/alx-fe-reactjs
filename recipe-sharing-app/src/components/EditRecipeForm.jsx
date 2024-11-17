@@ -10,9 +10,13 @@ const EditRecipeForm = ({ recipeId }) => {
   const [title, setTitle] = useState(recipe.title);
   const [description, setDescription] = useState(recipe.description);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevents the default form submission (page reload)
+
+    // Update the recipe
     updateRecipe({ id: recipeId, title, description });
+    
+    // Notify the user that the recipe has been updated
     alert('Recipe updated!');
   };
 
