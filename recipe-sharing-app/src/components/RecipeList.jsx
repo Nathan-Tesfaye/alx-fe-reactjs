@@ -1,6 +1,6 @@
 import { useRecipeStore } from "./recipeStore";
 
-  export const RecipeList = () => {
+  const RecipeList = () => {
     const recipes = useRecipeStore(state => state.recipes);
 
     // console.log(recipes);
@@ -17,6 +17,6 @@ import { useRecipeStore } from "./recipeStore";
     );
   };
 
-
+ export default RecipeList;
 
  
