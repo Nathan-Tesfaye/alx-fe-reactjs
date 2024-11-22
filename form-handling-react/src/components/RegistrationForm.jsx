@@ -1,49 +1,82 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import React from 'react';
+import { useState } from 'react';
+
+const Trial = () => {
 
 
-const RegistrationForm = () => {
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: ""
+  })
 
-  const [username, setUsername] =useState('');
-  const [email, setEmail] =useState('');
-  const [password, setPassword] =useState('');
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    
+    const {name, value} = e.target;
+
+    setFormData( (prev) => ({
+      ...prev,
+      [name]: value
+    }))
+
+    setErrors( (prev) => ({
+      ...prev,
+      [name]: ""
+    }))
+  }
 
 
-  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = {}
 
+    if (!formData.username) {
+      newErrors.username = "Username is required."
+    }
+    
+    if (!formData.email) {
+      newErrors.email = "Email is required."
+    }
+    
+    if(!formData.password) {
+      newErrors.password = "Password is required."
+    }
+
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors)
+    }
+  }
 
   return (
     <div>
       <form style={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      gap: 5
-    }} onSubmit={ (e) => {
-      e.preventDefault();
-      console.log(username);
-      console.log(email);
-      console.log(password);
-    }}>
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 5
+      }} 
+      onSubmit={handleSubmit}>
+        
         <label htmlFor="username">Username</label>
-        <input type="text" name="username" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required: true />
+        <input type="text" name="username" id="username" value={formData.username} onChange={handleChange} />
+        {errors.username && <p style={{color: "red"}}>{errors.username}</p> }
 
         <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" value={email} onChange={ (e) => setEmail(e.target.value)} />
+        <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} />
+        {errors.email && <p style={{color: "red"}}>{errors.email}</p>  }
 
         <label htmlFor="password">Password</label>
-        <input type="password" name="password" id="password" value={password} onChange={ (e) => setPassword(e.target.value)} />
+        <input type="password" name="password" id="password" value={formData.password} onChange={handleChange}/>
+        {errors.password && <p style={{color: "red"}}>{errors.password}</p> }
 
-        <button type="submit" style={{
-          backgroundColor:"purple",
-          color: "white",
-          padding: "0.5rem",
-          borderRadius: "10px"
-        }}>Register</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   )
 }
 
-export default RegistrationForm;
+export default Trial

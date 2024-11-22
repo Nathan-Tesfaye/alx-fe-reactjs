@@ -1,13 +1,13 @@
-import RegistrationForm from "./components/RegistrationForm";
+import Trial from "./components/RegistrationForm";
 
 
 function App() {
 
   return (
     <div>
-      <RegistrationForm />
+      <Trial />
     </div>
   )
 }
 
-export default App
+export default App;
