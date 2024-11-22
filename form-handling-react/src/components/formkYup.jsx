@@ -1,27 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as yup from 'yup';
+import { validationSchema, initialValues, onSubmit } from './formikFormss';
 
-const formikForm = () => {
-
-
-  const validationSchema = yup.object({
-    username: yup.string().required('Username is required'),
-    email: yup.string().email('Invalid email format').required('Email is required'),
-    password: yup.string()
-      .min(6, 'Password must be at least 6 characters')
-      .required('Password is required'),
-  });
-
-  const initialValues = {
-    username: '',
-    email: '',
-    password: '',
-  };
-
-  const onSubmit = (values) => {
-    console.log('Form data:', values);
-  };
-  
+const RegistrationForm = () => {
 
   return (
     <Formik
@@ -70,9 +50,4 @@ const formikForm = () => {
   );
 };
 
-export default formikForm;
- 
-
-
-  
-  
+export default RegistrationForm;  
