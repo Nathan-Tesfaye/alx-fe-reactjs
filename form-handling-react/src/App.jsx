@@ -1,11 +1,12 @@
-import Trial from "./components/RegistrationForm";
+import RegistrationForm from "./components/RegistrationForm";
+
 
 
 function App() {
 
   return (
     <div>
-      <Trial />
+      <RegistrationForm />
     </div>
   )
 }
