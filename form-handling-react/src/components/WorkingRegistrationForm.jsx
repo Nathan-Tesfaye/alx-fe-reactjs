@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const MyRegistrationForm = () => {
+const WorkingRegistrationForm = () => {
 
 
   const [formData, setFormData] = useState({
@@ -33,15 +33,15 @@ const MyRegistrationForm = () => {
     e.preventDefault();
     const newErrors = {}
 
-    if (!username) {
+    if (!formData.username) {
       newErrors.username = "Username is required."
     }
     
-    if (!email) {
+    if (!formData.email) {
       newErrors.email = "Email is required."
     }
     
-    if(!password) {
+    if(!formData.password) {
       newErrors.password = "Password is required."
     }
 
@@ -80,4 +80,4 @@ const MyRegistrationForm = () => {
   )
 }
 
-export default MyRegistrationForm; 
+export default WorkingRegistrationForm; 
