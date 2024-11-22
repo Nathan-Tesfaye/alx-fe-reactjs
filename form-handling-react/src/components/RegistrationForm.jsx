@@ -41,7 +41,7 @@ const MyRegistrationForm = () => {
       newErrors.email = "Email is required."
     }
     
-    if(!password) {
+    if (!password) {
       newErrors.password = "Password is required."
     }
 
