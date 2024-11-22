@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useState } from 'react';
 
@@ -62,15 +63,15 @@ const MyRegistrationForm = () => {
       onSubmit={handleSubmit}>
         
         <label htmlFor="username">Username</label>
-        <input type="text" name="username" id="username" value={formData.username} onChange={handleChange} />
+        <input type="text" name="username" id="username" value={username} onChange={handleChange} />
         {errors.username && <p style={{color: "red"}}>{errors.username}</p> }
 
         <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} />
+        <input type="email" name="email" id="email" value={email} onChange={handleChange} />
         {errors.email && <p style={{color: "red"}}>{errors.email}</p>  }
 
         <label htmlFor="password">Password</label>
-        <input type="password" name="password" id="password" value={formData.password} onChange={handleChange}/>
+        <input type="password" name="password" id="password" value={password} onChange={handleChange}/>
         {errors.password && <p style={{color: "red"}}>{errors.password}</p> }
 
         <button type="submit">Register</button>
