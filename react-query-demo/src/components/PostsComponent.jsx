@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 const fetchData = async () => {
   const response = await fetch ('https://jsonplaceholder.typicode.com/posts');
   const data = await response.json();
+  console.log("Data fetched");
   return data;
 }
 
@@ -28,6 +29,7 @@ const PostsComponent = () => {
 
   return (
     <div>
+      <button onClick={fetchData}>Refetch</button>
       {posts?.map( (post) => {
         return (
           <div key={post.id}>
