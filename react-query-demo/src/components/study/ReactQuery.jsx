@@ -40,11 +40,11 @@ const ReactQuery = () => {
   const [body, setBody] = useState("");
 
 
-  const { data: posts, isLoading } = useQuery({
+  const { data: posts, isLoading, isError } = useQuery({
     queryFn: () => fetchData(),
     queryKey: ["posts"],
-    // staleTime: Infinity,
-    cacheTime: 0,
+    staleTime: 1000 * 60 * 5,  // Data is fresh for 5 minutes
+    cacheTime: 1000 * 60 * 10, // Keep the cache for 10 minutes
   });
 
   const {mutateAsync: addPostMutation} = useMutation({
@@ -56,6 +56,10 @@ const ReactQuery = () => {
 
   if (isLoading) {
     return <h2>Loading...</h2>  
+  }
+
+  if (isError) {
+    return <div>Error Fetching Data</div>
   }
 
   const handleAddPost = async () => {

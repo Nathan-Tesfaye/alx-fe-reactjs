@@ -12,6 +12,10 @@ const PostsComponent = () => {
   const { data: posts, isError, error, isLoading } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchData,
+    staleTime: 1000 * 60 * 5,  // Data is fresh for 5 minutes
+    cacheTime: 1000 * 60 * 10, // Keep the cache for 10 minutes
+    refetchOnWindowFocus: false,
+    keepPreviousData: true,
   })
 
   if (isLoading) {
