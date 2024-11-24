@@ -7,6 +7,7 @@
 
 import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
 import BlogPost from "./components/Profile";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
         {/* Route for the Profile component */}
         {/* <Route exact path="/" component={Profile} /> */}
         <Route path= "/blog/:id" Component={BlogPost}/>
+        <ProtectedRoute path="/profile/:userId" component={Profile} />
+        
       </Switch>
     </Router>
     
