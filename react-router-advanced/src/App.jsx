@@ -5,12 +5,19 @@
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+i
 
 
 function App() {
   return (
-    <div>App</div>
+    <Router>
+      <Switch>
+        {/* Route for the Profile component */}
+        <Route exact path="/" component={Profile} />
+      </Switch>
+    </Router>
+    
   )
 }
 
