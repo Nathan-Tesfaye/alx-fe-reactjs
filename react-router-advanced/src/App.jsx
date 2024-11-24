@@ -5,18 +5,18 @@
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
-import { BrowserRouter as Routes, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
 i
 
 
 function App() {
   return (
-    <Routes>
+    <Router>
       <Switch>
         {/* Route for the Profile component */}
         <Route exact path="/" component={Profile} />
       </Switch>
-    </Routes>
+    </Router>
     
   )
 }
