@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import TodoList from "../components/TodoList";
+import TodoList from "./TodoList";
 
 // Setup the test with a few initial todos
 beforeEach(() => {
