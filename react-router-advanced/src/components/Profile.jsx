@@ -3,7 +3,7 @@ import { Link, Route, useRouteMatch } from "react-router-dom";
 import ProfileDetails from "./ProfileDetails";
 import ProfileSettings from "./ProfileSettings";
 
-const Profile = () => {
+const BlogPost = () => {
   // useRouteMatch provides the current path and URL
   const { path, url } = useRouteMatch();
 
@@ -25,4 +25,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default BlogPost;
