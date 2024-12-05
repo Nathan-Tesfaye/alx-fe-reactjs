@@ -29,11 +29,12 @@ const HomePage = () => {
   console.log(recipes);
 
   return (
-    <div className="p-8 ">
+    <div className="p-8">
+      <span grid grid-cols-1 grid-cols-2 grid-cols-3 sm></span>
       <h1 className="text-4xl text-center pb-8">Recipes</h1>
       <div className="flex flex-col items-center md:gap-28  md:flex-row md:justify-center md:items-center">
         {recipes.map((recipe) => {
-          return (
+          return (  
             <div>
               <div className="flex flex-col bg-slate-200 items-center gap-3 w-56 lg:min-w-96 mb-10">
                 <img src={recipe.image} alt="Food pic" className="p-6 rounded-full" />
