@@ -31,13 +31,13 @@ function App() {
 export default App;
 
 
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<HomePage />} />
-//         <Route path="/recipe/:id" element={<RecipeDetail />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
+function Dummy() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/recipe/:id" element={<RecipeDetail />} />
+      </Routes>
+    </Router>
+  );
+}
