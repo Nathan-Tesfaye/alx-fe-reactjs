@@ -7,6 +7,8 @@ const RecipeDetail = () => {
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const Routes = 1
+
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
