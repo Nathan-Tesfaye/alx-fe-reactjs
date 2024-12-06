@@ -10,7 +10,8 @@
       "100g pancetta",
       "50g pecorino cheese",
       "Black pepper"
-    ]
+    ],
+    "instructions": "Cook spaghetti. Beat eggs with cheese. Fry pancetta. Combine with spaghetti and serve."
   },
   {
     "id": 2,
@@ -23,6 +24,7 @@
       "2 tbsp tikka masala spice",
       "1 cup tomato sauce",
       "1/2 cup cream"
-    ]
+    ],
+    "instructions": "Marinate chicken in yogurt and spices. Grill chicken. Prepare sauce and combine with chicken."
   }
 ]

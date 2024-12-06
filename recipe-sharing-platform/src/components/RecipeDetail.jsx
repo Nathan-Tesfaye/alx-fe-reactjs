@@ -49,6 +49,7 @@ const RecipeDetail = () => {
             return <li>{ingredient}</li>;
           })}
         </ul>
+        <p>{recipe.instructions}</p>
       </div>
     </div>
   );
