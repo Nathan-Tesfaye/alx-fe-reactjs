@@ -1,13 +1,24 @@
-import HomePage from "./components/HomePage"
+import HomePage from "./components/HomePage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RecipeDetail from "./components/RecipeDetail";
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/recipe/:id",
+    element: <RecipeDetail />,
+  },
+]);
+
 
 
 function App() {
-
-  return (
-    <div> 
-      <HomePage />
-    </div>
-  )
+  
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

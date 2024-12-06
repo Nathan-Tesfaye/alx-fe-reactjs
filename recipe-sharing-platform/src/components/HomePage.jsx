@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import React from "react";
 
@@ -24,9 +25,10 @@ const HomePage = () => {
     };
 
     fetchData();
+    
   }, []);
 
-  console.log(recipes);
+  
 
   return (
     <div className="p-8">
@@ -41,9 +43,10 @@ const HomePage = () => {
                 <h3 className="text-xl font-bold">{recipe.title}</h3>
                 <p className="text-center pb-6 px-2">{recipe.summary}</p>
                 <button className="bg-purple-500 font-semibold px-5 py-3 mb-10 rounded-full shadow-lg hover:bg-purple-300">Details</button>
+                
             </div>
                 
-              <div className="flex flex-col bg-slate-200 items-center gap-3 w-56 lg:min-w-96 mb-10">
+              <div classNa  me="flex flex-col bg-slate-200 items-center gap-3 w-56 lg:min-w-96 mb-10">
                 <img src={recipe.image} alt="Food pic" className="p-6 rounded-full" />
                 <h3 className="text-xl font-bold">{recipe.title}</h3>
                 <p className="text-center pb-6 px-2">{recipe.summary}</p>
