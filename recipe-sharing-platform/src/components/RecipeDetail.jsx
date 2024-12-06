@@ -50,6 +50,7 @@ const RecipeDetail = () => {
           })}
         </ul>
         <p>{recipe.instructions}</p>
+        <button className="bg-purple-500 font-semibold px-5 py-3 mb-10 rounded-full shadow-lg hover:bg-purple-300">Comment</button>
       </div>
     </div>
   );
