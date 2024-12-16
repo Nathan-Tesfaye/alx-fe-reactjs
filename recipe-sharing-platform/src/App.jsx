@@ -1,7 +1,7 @@
 import HomePage from "./components/HomePage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RecipeDetail from "./components/RecipeDetail";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddRecipeForm from "./components/AddRecipeForm";
 
 
@@ -31,13 +31,13 @@ function App() {
 export default App;
 
 
-function Dummy() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/recipe/:id" element={<RecipeDetail />} />
-      </Routes>
-    </Router>
-  );
-}
+// function Dummy() {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<HomePage />} />
+//         <Route path="/recipe/:id" element={<RecipeDetail />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
