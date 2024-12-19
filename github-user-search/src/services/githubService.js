@@ -1,6 +1,8 @@
 import axios from "axios";
 
 const forChecker = 'https://api.github.com'
+const forChecker2 = "https://api.github.com/search/users?q"
+
 const apiUrl = import.meta.env.VITE_APP_GITHUB_API_KEY;
 
 const api = axios.create({
