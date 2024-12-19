@@ -31,6 +31,7 @@ const Search = () => {
 
     try {
       const users = await fetchUserData(username, location, minRepos);
+      
 
       if (users.length === 0) {
         setError("No user match search criteria");
@@ -115,9 +116,10 @@ const Search = () => {
           <h2>Search result</h2>
           <ul>
             {userData.map((user) => (
-              <li>
+              <li key={user.id}>
                 <h3>{user.login}</h3>
                 <a href={user.html_url}>View Profile</a>
+                <img src={user.avatar_url} alt="avatar" />
               </li>
             ))}
           </ul>
