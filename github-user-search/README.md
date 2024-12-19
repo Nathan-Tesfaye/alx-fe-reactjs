@@ -1,8 +1,10 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div>
+        <label htmlFor="advanced search" className="mr-3">Location</label>
+        <input type="text" name="advanced search" id="advanced search" className="border border-black mr-3" />
+        <button className="border bg-purple-500 p-2 rounded-md mb-5">Search</button>
+      </div>
+      <div>
+        <label htmlFor="advanced search" className="mr-3">Ripo count</label>
+        <input type="text" name="advanced search" id="advanced search" className="border border-black mr-3" />
+        <button className="border bg-purple-500 p-2 rounded-md mb-5">Search</button>
+      </div>
