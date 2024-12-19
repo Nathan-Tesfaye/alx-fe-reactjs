@@ -34,7 +34,7 @@ const Search = () => {
       
 
       if (users.length === 0) {
-        setError("No user match search criteria");
+        setError("Looks like we cant find the user");
       } else {
         setUserData(users);
       }
